@@ -7,7 +7,7 @@ import heromeimage from "./hero-me.jpeg";
 
 export function Hero() {
   return (
-    <div className="flex gap-8 px-16 py-32 justify-between">
+    <div className="flex flex-col-reverse gap-28 px-16 py-16 justify-between items-center lg:flex-row lg:items-start lg:py-32">
       <div className="flex flex-col items-start gap-8 w-full flex-1">
         <div>
           <h1 className="text-5xl font-bold mb-4 text-white">
