@@ -43,7 +43,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="shrink-0 relative w-[300px] h-[350px]">
+      <div className="shrink-0 relative w-[85%] h-[350px] md:w-[300px]">
         <div className="absolute inset-8 w-full h-full bg-gray-200" />
 
         <img

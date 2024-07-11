@@ -10,7 +10,7 @@ export function About() {
       </div>
 
       <div className="flex flex-col gap-28 items-center xl:flex-row xl:gap-32 xl:items-start">
-        <div className="w-[350px] h-[500px] md:w-[450px] md:h-[600px] shrink-0 relative">
+        <div className="w-[85%] h-[500px] md:w-[450px] md:h-[600px] shrink-0 relative">
           <div className="bg-gray-200 w-full h-full absolute inset-y-8 inset-x-[-2rem]"></div>
           <img
             src={aboutmeimage}
