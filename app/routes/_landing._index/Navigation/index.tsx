@@ -7,7 +7,7 @@ export function Navigation() {
         Emilio
       </Link>
 
-      <nav>
+      <nav className="hidden md:block">
         <ul className="flex gap-8 text-gray-200">
           <li>
             <a href="/#about">About</a>
