@@ -9,10 +9,9 @@ export function About() {
         </span>
       </div>
 
-      <div className="flex gap-48">
-        <div className="w-[450px] h-[600px] shrink-0 relative">
+      <div className="flex flex-col gap-28 items-center xl:flex-row xl:gap-32 xl:items-start">
+        <div className="w-[350px] h-[500px] md:w-[450px] md:h-[600px] shrink-0 relative">
           <div className="bg-gray-200 w-full h-full absolute inset-y-8 inset-x-[-2rem]"></div>
-
           <img
             src={aboutmeimage}
             className="absolute w-full h-full object-cover inset-0"
