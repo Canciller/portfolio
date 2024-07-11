@@ -12,6 +12,9 @@ import { RemixServer } from "@remix-run/react";
 import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
 
+import { parseAcceptLanguage } from "intl-parse-accept-language";
+import { LocaleContextProvider } from "./providers/LocaleProvider";
+
 const ABORT_DELAY = 5_000;
 
 export default function handleRequest(
@@ -96,13 +99,20 @@ function handleBrowserRequest(
   remixContext: EntryContext
 ) {
   return new Promise((resolve, reject) => {
+    const acceptLanguage = request.headers.get("accept-language");
+    const locales = parseAcceptLanguage(acceptLanguage, {
+      validate: Intl.DateTimeFormat.supportedLocalesOf,
+    });
+
     let shellRendered = false;
     const { pipe, abort } = renderToPipeableStream(
-      <RemixServer
-        context={remixContext}
-        url={request.url}
-        abortDelay={ABORT_DELAY}
-      />,
+      <LocaleContextProvider locales={locales}>
+        <RemixServer
+          context={remixContext}
+          url={request.url}
+          abortDelay={ABORT_DELAY}
+        />
+      </LocaleContextProvider>,
       {
         onShellReady() {
           shellRendered = true;

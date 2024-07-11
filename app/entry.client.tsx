@@ -7,12 +7,17 @@
 import { RemixBrowser } from "@remix-run/react";
 import { startTransition, StrictMode } from "react";
 import { hydrateRoot } from "react-dom/client";
+import { LocaleContextProvider } from "./providers/LocaleProvider";
 
 startTransition(() => {
+  const locales = window.navigator.languages;
+
   hydrateRoot(
     document,
     <StrictMode>
-      <RemixBrowser />
+      <LocaleContextProvider locales={locales}>
+        <RemixBrowser />
+      </LocaleContextProvider>
     </StrictMode>
   );
 });
