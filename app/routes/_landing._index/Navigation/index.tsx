@@ -2,7 +2,7 @@ import { Link } from "@remix-run/react";
 
 export function Navigation() {
   return (
-    <div className="flex px-16 py-6 items-center gap-8 justify-between">
+    <div className="flex px-8 py-6 items-center gap-8 justify-between md:px-16">
       <Link to="/" className="text-4xl text-gray-200 font-semibold">
         Emilio
       </Link>

@@ -2,7 +2,7 @@ import aboutmeimage from "./about-me.jpeg";
 
 export function About() {
   return (
-    <div id="about" className="bg-gray-800 px-16 py-16">
+    <div id="about" className="bg-gray-800 px-8 py-16 md:px-16">
       <div className="text-center mb-16">
         <span className="bg-gray-700 px-4 py-2 rounded-full text-gray-300">
           About me
