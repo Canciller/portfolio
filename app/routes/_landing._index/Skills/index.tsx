@@ -6,7 +6,7 @@ export function Skills() {
           Skills
         </span>
 
-        <p className="text-gray-200">
+        <p className="text-gray-200 text-center">
           The skills, tools and technologies I am really good at:
         </p>
       </div>

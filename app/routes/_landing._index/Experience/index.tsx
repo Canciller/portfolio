@@ -6,7 +6,7 @@ export function Experience() {
           Experience
         </span>
 
-        <p className="text-gray-200">
+        <p className="text-gray-200 text-center">
           Here is a quick summary of my most recent experiences:
         </p>
       </div>

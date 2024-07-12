@@ -4,10 +4,12 @@ import { Navigation } from "./Navigation";
 import { About } from "./About";
 import { Experience } from "./Experience";
 import { Skills } from "./Skills";
+import { Contact } from "./Contact";
+import { Footer } from "./Footer";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Gabriel Emilio López Ojeda" },
+    { title: "Emilio's portfolio" },
     { name: "description", content: "Welcome to my portfolio!" },
   ];
 };
@@ -20,6 +22,8 @@ export default function Index() {
       <About />
       <Skills />
       <Experience />
+      <Contact />
+      <Footer />
     </div>
   );
 }
