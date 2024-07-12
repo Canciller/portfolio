@@ -15,14 +15,14 @@ export function Hero() {
           </h1>
 
           <p className="text-gray-200">
-            I am a software engineer with three years of experience in both web
-            and mobile development. My expertise includes working with React and
-            Node.js technologies, such as Next.js, or Remix.js, as well as
-            developing mobile applications using React Native and native code
-            for library development when needed. I am a curious individual who
-            is always eager to learn and grow. I highly value collaboration and
-            teamwork, which I believe are essential qualities in the roles I am
-            applying for.
+            I am a software engineer with expertise in both web and mobile
+            development. My skill set includes working with React and Node.js
+            technologies, including Next.js and Remix.js, as well as developing
+            mobile applications using React Native and native code for library
+            development when necessary. As a curious and eager learner, I
+            continuously seek opportunities to grow. I highly value
+            collaboration and teamwork, which are essential qualities in my
+            professional approach.
           </p>
         </div>
 
