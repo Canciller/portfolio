@@ -27,41 +27,25 @@ export function About() {
 
             <div className="flex flex-col gap-4">
               <p className="text-gray-200">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                suscipit nibh et dolor scelerisque, ac ornare turpis efficitur.
-                Phasellus vestibulum nunc vitae neque congue pellentesque.
-                Aenean turpis dolor, consectetur ac velit ut, hendrerit aliquam
-                libero. Aenean est velit, consequat at dolor et, lacinia
-                tristique ante. Fusce dui libero, efficitur ut pulvinar id,
-                accumsan vitae dui. Phasellus erat nibh, tincidunt sit amet
-                hendrerit vitae, consequat vitae eros. Vivamus maximus tincidunt
-                diam, eu varius urna. Praesent nisl est, eleifend non ante id,
-                vehicula iaculis quam. Etiam in eros in erat lobortis gravida.
-                Nulla scelerisque ligula quis erat dictum, nec auctor velit
-                ultricies. Aenean sit amet ipsum nisi. Phasellus sed tortor sit
-                amet diam varius porta et non justo. Vivamus vehicula nulla eu
-                dapibus eleifend. Maecenas finibus facilisis augue eu fermentum.
-                Morbi molestie fermentum quam at efficitur. Aliquam a tincidunt
-                mi.
+                {
+                  "I'm a dedicated software engineer with a strong focus on front-end development using React, backed by expertise in Node.js for back-end solutions and React Native for mobile app development. My passion lies in crafting intuitive user interfaces, ensuring they are not just functional but also aesthetically pleasing with pixel-perfect precision."
+                }
               </p>
 
               <p className="text-gray-200">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                suscipit nibh et dolor scelerisque, ac ornare turpis efficitur.
-                Phasellus vestibulum nunc vitae neque congue pellentesque.
-                Aenean turpis dolor, consectetur ac velit ut, hendrerit aliquam
-                libero. Aenean est velit, consequat at dolor et, lacinia
-                tristique ante. Fusce dui libero, efficitur ut pulvinar id,
-                accumsan vitae dui. Phasellus erat nibh, tincidunt sit amet
-                hendrerit vitae, consequat vitae eros. Vivamus maximus tincidunt
-                diam, eu varius urna. Praesent nisl est, eleifend non ante id,
-                vehicula iaculis quam. Etiam in eros in erat lobortis gravida.
-                Nulla scelerisque ligula quis erat dictum, nec auctor velit
-                ultricies. Aenean sit amet ipsum nisi. Phasellus sed tortor sit
-                amet diam varius porta et non justo. Vivamus vehicula nulla eu
-                dapibus eleifend. Maecenas finibus facilisis augue eu fermentum.
-                Morbi molestie fermentum quam at efficitur. Aliquam a tincidunt
-                mi.
+                {
+                  "Beyond the realm of coding, I lead an active lifestyle centered around bodybuilding and bouldering. Recently, I've delved into bouldering as a new challenge, finding joy in its physical and mental demands. The gym is my sanctuary, where I push myself through rigorous workouts to maintain a healthy balance and strive for personal growth."
+                }
+              </p>
+
+              <p className="text-gray-200">
+                {`Music is another passion of mine—I've recently started learning bass guitar, inspired by the emotive sounds of bands like Radiohead. When I'm not coding or honing my physical and musical skills, you'll often find me immersed in RPG video games or indulging in TV shows of all kinds. Some of my favorites include "Dexter," "The Office," and "Breaking Bad." When it comes to movies, "Alien" holds a special place as my all-time favorite.`}
+              </p>
+
+              <p className="text-gray-200">
+                {
+                  "Collaboration plays a crucial role in my approach to work—I thrive in collaborative environments, particularly when working closely with designers to translate creative visions into seamless user experiences across various platforms."
+                }
               </p>
             </div>
           </div>
