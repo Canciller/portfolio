@@ -1,7 +1,7 @@
 export function Experience() {
   return (
-    <div id="experience" className="bg-gray-800 px-8 py-16 md:px-16">
-      <div className="flex flex-col items-center mb-16">
+    <div id="experience" className="bg-gray-800 py-16">
+      <div className="flex flex-col items-center mb-16 px-8 md:px-16">
         <span className="bg-gray-700 px-4 py-2 rounded-full text-gray-300 mb-4">
           Experience
         </span>
@@ -11,10 +11,10 @@ export function Experience() {
         </p>
       </div>
 
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 md:px-16">
         {data.map((item, index) => {
           return (
-            <div key={index} className="bg-gray-700 p-8 rounded-xl">
+            <div key={index} className="bg-gray-700 p-8 md:rounded-xl">
               <div>
                 <div className="mb-4 flex flex-col gap-1 justify-between md:flex-row">
                   <div>
