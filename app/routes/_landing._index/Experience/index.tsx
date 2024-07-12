@@ -116,31 +116,6 @@ const data: Array<{
           </a>
           )
         </li>
-        <li>
-          Contributed to the development of an administrative panel using
-          Next.js. This panel managed roles, permissions, and data displayed in
-          the mobile app.
-        </li>
-        <li>
-          Contributed to the development of two internal mobile apps for the HR
-          department using React Native.
-        </li>
-        <li>
-          Managed deployment of mobile apps in App Store Connect, and Google
-          Play Console.
-        </li>
-        <li>
-          Utilized a Strapi (CMS) within the administrative panel, primarily to
-          facilitate easy management of resources such as images, videos, and
-          articles authored by non-developers.
-        </li>
-        <li>
-          Created multiple scripts to massively handle and load data to
-          databases from JSON or XLSX files.
-        </li>
-        <li>Created multiple cloud functions using Firebase.</li>
-        <li>Managed deployment of cloud functions using Firebase.</li>
-        <li>Fixed and debugged errors in code and deployments.</li>
       </>
     ),
   },
