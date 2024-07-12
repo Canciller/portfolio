@@ -1,52 +1,56 @@
 export function Experience() {
   return (
-    <div id="experience" className="bg-gray-800 py-16">
-      <div className="flex flex-col items-center mb-16 px-8 md:px-16">
-        <span className="bg-gray-700 px-4 py-2 rounded-full text-gray-300 mb-4">
-          Experience
-        </span>
+    <div id="experience" className="bg-gray-800">
+      <div className="py-16 max-w-screen-2xl mx-auto">
+        <div className="flex flex-col items-center mb-16 px-8 md:px-16">
+          <span className="bg-gray-700 px-4 py-2 rounded-full text-gray-300 mb-4">
+            Experience
+          </span>
 
-        <p className="text-gray-200 text-center">
-          Here is a quick summary of my most recent experiences:
-        </p>
-      </div>
+          <p className="text-gray-200 text-center">
+            Here is a quick summary of my most recent experiences:
+          </p>
+        </div>
 
-      <div className="flex flex-col gap-8 md:px-16">
-        {data.map((item, index) => {
-          return (
-            <div key={index} className="bg-gray-700 p-8 md:rounded-xl">
-              <div>
-                <div className="mb-4 flex flex-col gap-1 justify-between md:flex-row">
-                  <div>
-                    <h1 className="text-gray-200 font-semibold text-lg">
-                      {item.title}
-                    </h1>
+        <div className="flex flex-col gap-8 md:px-16">
+          {data.map((item, index) => {
+            return (
+              <div key={index} className="bg-gray-700 p-8 md:rounded-xl">
+                <div>
+                  <div className="mb-4 flex flex-col gap-1 justify-between md:flex-row">
+                    <div>
+                      <h1 className="text-gray-200 font-semibold text-lg">
+                        {item.title}
+                      </h1>
 
-                    <span className="text-gray-200 italic">{item.company}</span>
+                      <span className="text-gray-200 italic">
+                        {item.company}
+                      </span>
+                    </div>
+
+                    <span className="text-gray-200 text-sm md:text-base">
+                      {Intl.DateTimeFormat("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        timeZone: "UTC",
+                      }).format(item.startDate)}
+                      {" - "}
+                      {Intl.DateTimeFormat("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        timeZone: "UTC",
+                      }).format(item.endDate)}
+                    </span>
                   </div>
 
-                  <span className="text-gray-200 text-sm">
-                    {Intl.DateTimeFormat("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      timeZone: "UTC",
-                    }).format(item.startDate)}
-                    {" - "}
-                    {Intl.DateTimeFormat("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      timeZone: "UTC",
-                    }).format(item.endDate)}
-                  </span>
+                  <ul className="list-disc pl-4 flex flex-col gap-2 text-gray-200">
+                    {item.description}
+                  </ul>
                 </div>
-
-                <ul className="list-disc pl-4 flex flex-col gap-2 text-gray-200">
-                  {item.description}
-                </ul>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );
