@@ -6,7 +6,11 @@ export function Navigation() {
       <Link to="/" className="text-4xl text-gray-200 font-semibold">
         Emilio
       </Link>
+    </div>
+  );
+}
 
+/*
       <nav className="hidden md:block">
         <ul className="flex gap-8 text-gray-200">
           <li>
@@ -20,6 +24,4 @@ export function Navigation() {
           </li>
         </ul>
       </nav>
-    </div>
-  );
-}
+*/
