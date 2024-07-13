@@ -16,7 +16,7 @@ export function Hero() {
 
           <p className="text-gray-200">
             {
-              "I'm a dedicated software engineer with a strong focus on front-end development using React, backed by expertise in Node.js for back-end solutions and React Native for mobile app development. My passion lies in crafting intuitive user interfaces, ensuring they are not just functional but also aesthetically pleasing with pixel-perfect precision. As a curious and eager learner, I continuously seek opportunities to grow. I highly value collaboration and teamwork, which are essential qualities in my professional approach."
+              "I'm a dedicated software engineer with a strong focus on front-end development using React, backed by expertise in Node.js for back-end solutions and React Native for mobile app development. My passion lies in crafting intuitive user interfaces, ensuring they are not just functional but also aesthetically pleasing with pixel-perfect precision. As a curious and eager learner, I continuously seek opportunities to grow."
             }
           </p>
         </div>
