@@ -6,6 +6,7 @@ import { Experience } from "./Experience";
 import { Skills } from "./Skills";
 import { Contact } from "./Contact";
 import { Footer } from "./Footer";
+import { Projects } from "./Projects";
 
 export const meta: MetaFunction = () => {
   return [
@@ -22,6 +23,7 @@ export default function Index() {
       <About />
       <Skills />
       <Experience />
+      <Projects />
       <Contact />
       <Footer />
     </div>
