@@ -1,3 +1,5 @@
+import hpmledsite from "./hpmled-site.png";
+
 export function Experience() {
   return (
     <div id="experience" className="bg-gray-800">
@@ -15,7 +17,12 @@ export function Experience() {
         <div className="flex flex-col gap-8 md:px-16">
           {data.map((item, index) => {
             return (
-              <div key={index} className="bg-gray-700 p-8 md:rounded-xl">
+              <div
+                key={index}
+                className="bg-gray-700 p-8 md:rounded-xl flex flex-col gap-8 lg:flex-row"
+              >
+                {item.image ? <div>{item.image}</div> : null}
+
                 <div>
                   <div className="mb-4 flex flex-col gap-1 justify-between md:flex-row">
                     <div>
@@ -62,12 +69,20 @@ const data: Array<{
   description: React.ReactNode;
   startDate: Date;
   endDate: Date;
+  image?: React.ReactNode;
 }> = [
   {
     title: "Freelance",
     company: "HPMLED",
     startDate: new Date("2024-04-01T00:00:00.000Z"),
     endDate: new Date("2024-05-01T00:00:00.000Z"),
+    image: (
+      <img
+        src={hpmledsite}
+        alt="HPMLED website screenshot"
+        className="rounded-xl lg:max-w-[400px]"
+      />
+    ),
     description: (
       <li>
         Developed new website on Shopify utilizing React/Remix/Hydrogen,
