@@ -11,42 +11,60 @@ export function Projects() {
         </p>
       </div>
 
-      {projects.map((project, index) => (
-        <div
-          key={index}
-          className="text-gray-200 bg-gray-700 rounded-xl flex flex-col overflow-hidden lg:flex-row"
-        >
-          <div className="p-8 bg-gray-600 flex items-center justify-center flex-1">
-            {project.image}
-          </div>
+      <div className="flex flex-col gap-8">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="text-gray-200 bg-gray-700 rounded-xl flex flex-col overflow-hidden lg:flex-row"
+          >
+            <div className="p-8 bg-gray-600 flex items-center justify-center flex-1">
+              {project.image}
+            </div>
 
-          <div className="p-8 flex gap-8 flex-col flex-1">
-            <h1 className="font-semibold text-lg hover:underline">
-              <a target="_blank" href={project.url} rel="noreferrer">
-                {project.title}
-              </a>
-            </h1>
+            <div className="p-8 flex gap-8 flex-col flex-1">
+              <h1 className="font-semibold text-lg hover:underline">
+                <a target="_blank" href={project.url} rel="noreferrer">
+                  {project.title}
+                </a>
+              </h1>
 
-            <p>{project.description}</p>
+              <p>{project.description}</p>
 
-            <div className="flex gap-3 flex-wrap">
-              {project.tags.map((tag, j) => (
-                <span
-                  key={j}
-                  className="bg-gray-600 px-4 py-2 rounded-full text-gray-300 mb-4"
-                >
-                  {tag}
-                </span>
-              ))}
+              <div className="flex gap-3 flex-wrap">
+                {project.tags.map((tag, j) => (
+                  <span
+                    key={j}
+                    className="bg-gray-600 px-4 py-2 rounded-full text-gray-300 mb-4"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
 
 const projects = [
+  {
+    title: "Taxis App (Work in progress)",
+    description:
+      "I am currently developing an Uber-inspired app, focusing solely on the front-end as a practice project to enhance my skills. This project is still a work in progress, as I continuously refine the user interface and add new features to improve its functionality and visual appeal. I am using a free API for geodecoding, and all styles and components are handmade, with no libraries used for the UI, except for the map.",
+    tags: ["React native", "Expo"],
+    image: (
+      <div className="max-w-[350px]">
+        <img
+          className="rounded-3xl"
+          alt="Taxis App demo"
+          src="https://raw.githubusercontent.com/Canciller/taxis-app/develop/docs/example.gif"
+        />
+      </div>
+    ),
+    url: "https://github.com/Canciller/taxis-app",
+  },
   {
     title: "React Native images to PDF library",
     description:
