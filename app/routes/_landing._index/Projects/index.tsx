@@ -1,3 +1,5 @@
+import kanbanBoardImage from "./kanban-board.png";
+
 export function Projects() {
   return (
     <div className="max-w-screen-2xl mx-auto px-8 py-16 md:px-16">
@@ -28,7 +30,11 @@ export function Projects() {
                 </a>
               </h1>
 
-              <p>{project.description}</p>
+              {typeof project.description === "string" ? (
+                <p>{project.description}</p>
+              ) : (
+                project.description
+              )}
 
               <div className="flex gap-3 flex-wrap">
                 {project.tags.map((tag, j) => (
@@ -64,6 +70,37 @@ const projects = [
       </div>
     ),
     url: "https://github.com/Canciller/taxis-app",
+  },
+  {
+    title: "Kanban board",
+    description: (
+      <p>
+        I built a Kanban board using Vue.js and Nuxt.js as my first Vue project
+        to compare it with React. Users can manage tasks across columns with
+        features like creating, updating, and deleting tasks. Board data is
+        saved to LocalStorage for seamless session persistence. This project
+        helped me gain hands-on experience with Vue and Nuxt. You can see it at{" "}
+        <a
+          target="_blank"
+          href="https://kanban-board-gilt-zeta.vercel.app"
+          rel="noreferrer"
+          className="text-blue-400 hover:underline"
+        >
+          https://kanban-board-gilt-zeta.vercel.app
+        </a>
+      </p>
+    ),
+    tags: ["Vue", "Nuxt", "Vercel"],
+    image: (
+      <div className="max-w-[500px]">
+        <img
+          className="rounded-lg"
+          alt="Taxis App demo"
+          src={kanbanBoardImage}
+        />
+      </div>
+    ),
+    url: "https://github.com/Canciller/kanban-board",
   },
   {
     title: "React Native images to PDF library",
