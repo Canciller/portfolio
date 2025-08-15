@@ -1,4 +1,4 @@
-import kanbanBoardImage from "./kanban-board.png";
+import kanbanBoardImage from './kanban-board.png';
 
 export function Projects() {
   return (
@@ -19,9 +19,11 @@ export function Projects() {
             key={index}
             className="text-gray-200 bg-gray-700 rounded-xl flex flex-col overflow-hidden lg:flex-row"
           >
-            <div className="p-8 bg-gray-600 flex items-center justify-center flex-1">
-              {project.image}
-            </div>
+            {project.image ? (
+              <div className="p-8 bg-gray-600 flex items-center justify-center flex-1">
+                {project.image}
+              </div>
+            ) : null}
 
             <div className="p-8 flex gap-8 flex-col flex-1">
               <h1 className="font-semibold text-lg hover:underline">
@@ -30,7 +32,7 @@ export function Projects() {
                 </a>
               </h1>
 
-              {typeof project.description === "string" ? (
+              {typeof project.description === 'string' ? (
                 <p>{project.description}</p>
               ) : (
                 project.description
@@ -56,10 +58,10 @@ export function Projects() {
 
 const projects = [
   {
-    title: "Taxis App (Work in progress)",
+    title: 'Taxis App (Work in progress)',
     description:
-      "I am currently developing an Uber-inspired app, focusing solely on the front-end as a practice project to enhance my skills. This project is still a work in progress, as I continuously refine the user interface and add new features to improve its functionality and visual appeal. I am using a free API for geodecoding, and all styles and components are handmade, with no libraries used for the UI, except for the map.",
-    tags: ["React native", "Expo"],
+      'I am currently developing an Uber-inspired app, focusing solely on the front-end as a practice project to enhance my skills. This project is still a work in progress, as I continuously refine the user interface and add new features to improve its functionality and visual appeal. I am using a free API for geodecoding, and all styles and components are handmade, with no libraries used for the UI, except for the map.',
+    tags: ['React native', 'Expo'],
     image: (
       <div className="max-w-[350px]">
         <img
@@ -69,17 +71,42 @@ const projects = [
         />
       </div>
     ),
-    url: "https://github.com/Canciller/taxis-app",
+    url: 'https://github.com/Canciller/taxis-app',
   },
   {
-    title: "Kanban board",
+    title: 'React Native images to PDF library',
+    description:
+      'I developed a React Native library specifically designed to generate PDF files from images. This solution addresses a gap I identified, as existing libraries did not offer this functionality within React Native. It was originally created to fulfill a crucial requirement in a previous project, and I later decided to make it available as an open-source tool.',
+    url: 'https://github.com/Canciller/react-native-images-to-pdf',
+    tags: ['React native', 'Swift', 'Java'],
+    // image: (
+    //   <div className="flex gap-4 max-w-[400px]">
+    //     <div>
+    //       <img
+    //         className="rounded-xl"
+    //         src="https://raw.githubusercontent.com/Canciller/react-native-images-to-pdf/develop/docs/example-ios.gif"
+    //         alt="Example iOS"
+    //       />
+    //     </div>
+    //     <div>
+    //       <img
+    //         className="rounded-xl"
+    //         src="https://raw.githubusercontent.com/Canciller/react-native-images-to-pdf/develop/docs/example-android.gif"
+    //         alt="Example Android"
+    //       />
+    //     </div>
+    //   </div>
+    // ),
+  },
+  {
+    title: 'Kanban board',
     description: (
       <p>
         I built a Kanban board using Vue.js and Nuxt.js as my first Vue project
         to compare it with React. Users can manage tasks across columns with
         features like creating, updating, and deleting tasks. Board data is
         saved to LocalStorage for seamless session persistence. This project
-        helped me gain hands-on experience with Vue and Nuxt. You can see it at{" "}
+        helped me gain hands-on experience with Vue and Nuxt. You can see it at{' '}
         <a
           target="_blank"
           href="https://kanban-board-gilt-zeta.vercel.app"
@@ -90,7 +117,7 @@ const projects = [
         </a>
       </p>
     ),
-    tags: ["Vue", "Nuxt", "Vercel"],
+    tags: ['Vue', 'Nuxt', 'Vercel'],
     image: (
       <div className="max-w-[500px]">
         <img
@@ -100,31 +127,6 @@ const projects = [
         />
       </div>
     ),
-    url: "https://github.com/Canciller/kanban-board",
-  },
-  {
-    title: "React Native images to PDF library",
-    description:
-      "I developed a React Native library specifically designed to generate PDF files from images. This solution addresses a gap I identified, as existing libraries did not offer this functionality within React Native. It was originally created to fulfill a crucial requirement in a previous project, and I later decided to make it available as an open-source tool.",
-    url: "https://github.com/Canciller/react-native-images-to-pdf",
-    tags: ["React native", "Swift", "Java"],
-    image: (
-      <div className="flex gap-4 max-w-[400px]">
-        <div>
-          <img
-            className="rounded-xl"
-            src="https://raw.githubusercontent.com/Canciller/react-native-images-to-pdf/develop/docs/example-ios.gif"
-            alt="Example iOS"
-          />
-        </div>
-        <div>
-          <img
-            className="rounded-xl"
-            src="https://raw.githubusercontent.com/Canciller/react-native-images-to-pdf/develop/docs/example-android.gif"
-            alt="Example Android"
-          />
-        </div>
-      </div>
-    ),
+    url: 'https://github.com/Canciller/kanban-board',
   },
 ];

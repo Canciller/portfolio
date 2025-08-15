@@ -1,9 +1,9 @@
-import { LinkedIn } from "./LinkedIn";
-import { Location } from "./Location";
-import { GitHub } from "./Github";
-import { Instagram } from "./Instagram";
+import { LinkedIn } from './LinkedIn';
+import { Location } from './Location';
+import { GitHub } from './Github';
+import { Instagram } from './Instagram';
 
-import heromeimage from "./hero-me.jpeg";
+import heromeimage from './hero-me.jpeg';
 
 export function Hero() {
   return (
@@ -16,7 +16,7 @@ export function Hero() {
 
           <p className="text-gray-200">
             {
-              "I'm a dedicated software engineer with a strong focus on front-end development using React, backed by expertise in Node.js for back-end solutions and React Native for mobile app development. My passion lies in crafting intuitive user interfaces, ensuring they are not just functional but also aesthetically pleasing with pixel-perfect precision. As a curious and eager learner, I continuously seek opportunities to grow."
+              'I’m a dedicated software engineer with 4+ years of experience specializing in React for front-end, Node.js for back-end, and React Native for mobile development. I build scalable, efficient server-side applications and craft intuitive, pixel-perfect user interfaces. I’m passionate about learning new technologies and continuously improving my skills.'
             }
           </p>
         </div>

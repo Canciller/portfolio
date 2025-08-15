@@ -1,4 +1,4 @@
-import hpmledsite from "./hpmled-site.png";
+import hpmledsite from './hpmled-site.png';
 
 export function Experience() {
   return (
@@ -23,8 +23,8 @@ export function Experience() {
               >
                 {item.image ? <div>{item.image}</div> : null}
 
-                <div>
-                  <div className="mb-4 flex flex-col gap-1 justify-between md:flex-row">
+                <div className="flex-1">
+                  <div className="mb-4 flex flex-col gap-1 md:justify-between md:flex-row">
                     <div>
                       <h1 className="text-gray-200 font-semibold text-lg">
                         {item.title}
@@ -36,17 +36,19 @@ export function Experience() {
                     </div>
 
                     <span className="text-gray-200 text-sm md:text-base">
-                      {Intl.DateTimeFormat("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        timeZone: "UTC",
+                      {Intl.DateTimeFormat('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        timeZone: 'UTC',
                       }).format(item.startDate)}
-                      {" - "}
-                      {Intl.DateTimeFormat("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        timeZone: "UTC",
-                      }).format(item.endDate)}
+                      {' - '}
+                      {item.endDate
+                        ? Intl.DateTimeFormat('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            timeZone: 'UTC',
+                          }).format(item.endDate)
+                        : 'Present'}
                     </span>
                   </div>
 
@@ -68,14 +70,50 @@ const data: Array<{
   company: string;
   description: React.ReactNode;
   startDate: Date;
-  endDate: Date;
+  endDate?: Date;
   image?: React.ReactNode;
 }> = [
   {
-    title: "Freelance",
-    company: "HPMLED",
-    startDate: new Date("2024-04-01T00:00:00.000Z"),
-    endDate: new Date("2024-05-01T00:00:00.000Z"),
+    title: 'Software Engineer',
+    company: 'Dex',
+    startDate: new Date('2024-10-01T00:00:00.000Z'),
+    description: (
+      <>
+        <li>
+          Led development and maintenance of Rolodex CRM (
+          <a
+            href="https://rolodexcrm.com"
+            target="_blank"
+            rel="noreferrer"
+            className="underline text-blue-400"
+          >
+            rolodexcrm.com
+          </a>
+          ), a platform that syncs contacts and interactions to boost team
+          collaboration and customer engagement, supporting a growing user base.
+          Built with Next.js, Node.js, and React Native.
+        </li>
+        <li>
+          Maintained Dex CRM (
+          <a
+            href="https://getdex.com"
+            target="_blank"
+            rel="noreferrer"
+            className="underline text-blue-400"
+          >
+            getdex.com
+          </a>
+          ), supporting 10,000+ users with feature enhancements and performance
+          optimizations using Vue.js, Node.js, and React Native.
+        </li>
+      </>
+    ),
+  },
+  {
+    title: 'Freelance Developer',
+    company: 'HPMLED',
+    startDate: new Date('2024-04-01T00:00:00.000Z'),
+    endDate: new Date('2024-05-01T00:00:00.000Z'),
     image: (
       <img
         src={hpmledsite}
@@ -89,7 +127,7 @@ const data: Array<{
         effectively enhancing the company’s online visibility by replacing an
         outdated and neglected site (
         <a
-          className="underline"
+          className="underline text-blue-400"
           href="https://hpmled.com"
           target="_blank"
           rel="noreferrer"
@@ -101,10 +139,10 @@ const data: Array<{
     ),
   },
   {
-    title: "Software Engineer",
-    company: "INTELA Servicios Corporativos",
-    startDate: new Date("2021-10-01T00:00:00.000Z"),
-    endDate: new Date("2024-03-01T00:00:00.000Z"),
+    title: 'Software Engineer',
+    company: 'Nomada Software House',
+    startDate: new Date('2021-10-01T00:00:00.000Z'),
+    endDate: new Date('2024-03-01T00:00:00.000Z'),
     description: (
       <>
         <li>
@@ -120,7 +158,7 @@ const data: Array<{
           >
             Play Store
           </a>
-          {", "}
+          {', '}
           <a
             href="https://apps.apple.com/mx/app/payjob-rh/id6468971111"
             target="_blank"
